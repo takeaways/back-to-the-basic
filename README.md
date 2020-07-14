@@ -16,3 +16,5 @@
   - Device APIs
   - File APIs
   - Storage APIs
+- MDN사이트에서 한 번 필요한 API를 찾아보아요!
+  - MDN([https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction])
