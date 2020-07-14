@@ -50,9 +50,9 @@
     - Client 이벤트에는 브라우저 윈도우 창에서 어마나 떨어져 있는지 Client
     - Page 문서의 시작점 부터 계산이 됩니다.
 - Scroll API
-  - scrollBy
-  - scrollTo
-  - scrollInto
+  - window.scrollBy : 추가되어 움직인다.
+  - window.scrollTo : 지정위치로 움직인다.
+  - Element.scrollInto : Element의 위치로 이동한다.
 - Load : load(all : css, images ), DOMContentLoaded(dom only), beforeunload, unload
   - body 태그의 끝에서 script 태그
 - Script 삽입
