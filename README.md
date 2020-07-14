@@ -42,6 +42,21 @@
   - window.outer : 브라우저의 사이즈 (url + 텝도 포함합니다.)
   - window.inner : 스크롤을 포함하는 페이지의 전체
   - documentElement.clientWidth: 스크롤을 제외하는 순수한 Document 사이즈 입니다.
+- Window 좌표
+  - x →
+  - y ↓
+  - Element.getBoundingClientRect() : Element의 정보를 받아 올 수 있습니다.
+  - Client XY vs Page XY
+    - Client 이벤트에는 브라우저 윈도우 창에서 어마나 떨어져 있는지 Client
+    - Page 문서의 시작점 부터 계산이 됩니다.
+- Scroll API
+  - scrollBy
+  - scrollTo
+  - scrollInto
+- Load : load(all : css, images ), DOMContentLoaded(dom only), beforeunload, unload
+  - body 태그의 끝에서 script 태그
+- Script 삽입
+  - defer 속성
 
 2. Documents
 
