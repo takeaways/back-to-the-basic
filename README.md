@@ -122,4 +122,4 @@
   - composition만 다시 일어 나도록 작성하는 것이 좋다.
   - http://csstriggers.com/
   - animation, transition... css 변경 할 때 Operation에서 무엇이 되는지 Composition만 변경되는게 Best of Best
-  -
+  - ex) left, top 보다는 Translate를 사용하자!!
