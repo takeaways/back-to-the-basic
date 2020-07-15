@@ -77,3 +77,10 @@
 
 1. 브라우저는 HTML을 읽어 가면서 Object Tree를 만든다.
 2. html <- head(meta, title, link), body(selection, span...)
+3. 브라우저가 이해할 수 있는 오브젝트 형태로 만들어 진다.
+
+### ★Event Target <- Node <- [Document, Element, Text]
+
+1. addEventListener()
+2. removeEventListener()
+3. dispatchEvent()
