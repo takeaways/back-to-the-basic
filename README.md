@@ -65,3 +65,15 @@
 3. Navigator
 
 - 브라우저의 유용한 정보가 들어가 있습니다.
+
+# DOM Document Object Model
+
+1. HTML Tag -> Javascript Node가 된다.
+2. EventTarget <- Node를 상속한다.
+3. Node <- Document, Element, Text
+4. Element <- HTMLInputElement.. etc
+
+### 브라우저는 어떻게 화면을 구성하는가.
+
+1. 브라우저는 HTML을 읽어 가면서 Object Tree를 만든다.
+2. html <- head(meta, title, link), body(selection, span...)
