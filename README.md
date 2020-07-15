@@ -115,8 +115,11 @@
 - Operation
   - Layout, Paint, Composition
   1. layout : x,y좌표와 사이즈를 정한다.
-  2. paint : 계산한 내용을 바로 브라우저에 그리는 것이 아니라, 즉 각각의 비트맵의 형태로 레이어 단위 별로 준비한다. will-change(새로운 레이어에 추가 해놓는다.)
+  2. paint : 계산한 내용을 바로 브라우저에 그리는 것이 아니라, 즉 각각의 비트맵의 형태로 레이어 단위 별로 준비한다. will-change(새로운 레이어에 추가 해놓는다. ex: will-change:opacity)
   3. composition: 순서대로 준비한 내용을 그린다.
   - paint가 자주 일어나지 않도록 한다.
     - translate : composition만 일어 난다.
   - composition만 다시 일어 나도록 작성하는 것이 좋다.
+  - http://csstriggers.com/
+  - animation, transition... css 변경 할 때 Operation에서 무엇이 되는지 Composition만 변경되는게 Best of Best
+  -
