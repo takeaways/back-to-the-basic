@@ -84,3 +84,16 @@
 1. addEventListener()
 2. removeEventListener()
 3. dispatchEvent()
+
+# CSSOM
+
+- CSS Object Model
+  - DOM(HTML) + CSS(Style 요소) = CSSOM
+- cascading rule에 따른 계산된 모든 스타일
+  - ex) 부모 font-size : 14px; 모든 자식이 14가 된다.
+
+# Render Tree
+
+- DOM + CSSOM = Render Tree
+- 사용자에게 궁극적으로 보여지는 아이들만 Tree가 된다.
+  - diplay:none // render tree에 포함되지 않는다.
