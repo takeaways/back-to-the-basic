@@ -135,7 +135,7 @@
     - 속성 [document.querySelector("img[src="me.png")]"]
 2. Create : document.createElement()
     - setAttribute("class","title")
-    - Element.textContent = "str"
+    - Element.textContent = "string"
     - Element.appendChild()
     - Element.append()
     - Element.inserBefore(여기를, 여기전에)
