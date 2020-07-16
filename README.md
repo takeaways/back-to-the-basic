@@ -139,3 +139,6 @@
     - Element.appendChild()
     - Element.append()
     - Element.inserBefore(여기를, 여기전에)
+3. Update : innerHTML
+    - innerHTML : 한 번에 업데이이트 할 수 있으나 변경이 빈번하게 사용하는 행위는 좋지 않아요 DOM tree, 부터 쭉 진행 되기 때문이죠
+
