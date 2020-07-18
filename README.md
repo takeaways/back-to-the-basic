@@ -173,3 +173,17 @@
 
 1. event.preventDefault()
    - 브라우저의 기본동작을 취소하자.
+
+### 이벤트 위임 (델리게이션)
+
+1. 부모 컨테이너는 어떤 자식에서 이벤트가 발생하여도 들을 수 있다.
+   - li 말고 ul에서 이벤트를 처리하자!
+   ```javascript
+   //Coooooooooooooool ✦
+   const ul = ducoument.querySelector('ul');
+   ul.addEventListener('click', (event) => {
+     if (event.target.targetName === 'LI') {
+       event.target.classList.add('selected');
+     }
+   });
+   ```
