@@ -166,5 +166,10 @@
 2. Capturing : 부모 -> 자식
 3. crrentTarget(지금의 element), target(발생한 엘레먼트)
 4. [위험 가능한 사용하지 말자]stopPropagation, stopImmediatePropagation(나만 처리하겠다!!)
-5. 관심이 있을 때만 처리하자!
+5. 관심이 있을 때만 처리하자! 부모에서는 다음과 같이 처리한다.
    - (event.target !== event.currentTaget) return //한다.
+
+### 브라우저의 기본 기능을 취소하자!
+
+1. event.preventDefault()
+   - 브라우저의 기본동작을 취소하자.
