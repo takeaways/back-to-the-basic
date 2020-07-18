@@ -117,28 +117,54 @@
     1. layout : x,y좌표와 사이즈를 정한다.
     2. paint : 계산한 내용을 바로 브라우저에 그리는 것이 아니라, 즉 각각의 비트맵의 형태로 레이어 단위 별로 준비한다. will-change(새로운 레이어에 추가 해놓는다. ex: will-change:opacity)
     3. composition: 순서대로 준비한 내용을 그린다.
-        - paint가 자주 일어나지 않도록 한다.
-          - translate : composition만 일어 난다.
-        - composition만 다시 일어 나도록 작성하는 것이 좋다.
-        - http://csstriggers.com/
-        - animation, transition... css 변경 할 때 Operation에서 무엇이 되는지 Composition만 변경되는게 Best of Best
-        - ex) left, top 보다는 Translate를 사용하자!!
+       - paint가 자주 일어나지 않도록 한다.
+         - translate : composition만 일어 난다.
+       - composition만 다시 일어 나도록 작성하는 것이 좋다.
+       - http://csstriggers.com/
+       - animation, transition... css 변경 할 때 Operation에서 무엇이 되는지 Composition만 변경되는게 Best of Best
+       - ex) left, top 보다는 Translate를 사용하자!!
     4. chrome -> Performance tap을 이용해서 성능을 확인할 수 있습니다.
-        - record -> stop : profiling을 통한 성능을 알아 볼 수 있다.
-        - red: bad, green: good
+       - record -> stop : profiling을 통한 성능을 알아 볼 수 있다.
+       - red: bad, green: good
 
 # Dom 조작하기
-1. Select : document.querySelector()
-    - 처음에 발견된 DOM을 리턴한다. 
-    - class [document.querySelector(.)]
-    - id [document.querySelector(#)]
-    - 속성 [document.querySelector("img[src="me.png")]"]
-2. Create : document.createElement()
-    - setAttribute("class","title")
-    - Element.textContent = "string"
-    - Element.appendChild()
-    - Element.append()
-    - Element.inserBefore(여기를, 여기전에)
-3. Update : innerHTML
-    - innerHTML : 한 번에 업데이이트 할 수 있으나 변경이 빈번하게 사용하는 행위는 좋지 않아요 DOM tree, 부터 쭉 진행 되기 때문이죠
 
+1. Select : document.querySelector()
+   - 처음에 발견된 DOM을 리턴한다.
+   - class [document.querySelector(.)]
+   - id [document.querySelector(#)]
+   - 속성 [document.querySelector("img[src="me.png")]"]
+2. Create : document.createElement()
+   - setAttribute("class","title")
+   - Element.textContent = "string"
+   - Element.appendChild()
+   - Element.append()
+   - Element.inserBefore(여기를, 여기전에)
+3. Update : innerHTML
+   - innerHTML : 한 번에 업데이이트 할 수 있으나 변경이 빈번하게 사용하는 행위는 좋지 않아요 DOM tree, 부터 쭉 진행 되기 때문이죠
+
+# Event (이벤트)
+
+1. 브라우저 위에서 발생할 수 있는 이벤트의 종류는 너무 다양하다.
+2. Events 개념
+   - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+3. Events 종류
+   - https://developer.mozilla.org/en-US/docs/Web/Events
+
+### Event Handler
+
+1. 이벤트 오브젝트를 등록한 콜백함수로 전달하게 된다.
+2. EventTarget <- Node 다 등록할 수 있다.
+3. addEventListener, removeEventListnter, dispatchEvent
+   - dispatchEvent(new Event('click'))
+
+### Bubbling & Capturing
+
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture
+
+1. Bubbling : 자식 -> 부모
+2. Capturing : 부모 -> 자식
+3. crrentTarget(지금의 element), target(발생한 엘레먼트)
+4. [위험 가능한 사용하지 말자]stopPropagation, stopImmediatePropagation(나만 처리하겠다!!)
+5. 관심이 있을 때만 처리하자!
+   - (event.target !== event.currentTaget) return //한다.
