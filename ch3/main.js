@@ -48,5 +48,6 @@ addBtn.addEventListener('click', (event) => {
 container.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
     onAdd();
+    console.log('s');
   }
 });
