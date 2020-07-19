@@ -5,7 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Game</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/206a10ca9c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <section class="game">
+      <header class="game__header">
+        <button class="game__button">
+          <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
+        <span class="game__timer">0:0</span>
+        <span class="game__score">9</span>
+      </header>
+      <section class="game__field"></section>
+    </section>
+    <section class="pop-up pop-up--hide">
+      <button class="pop-up__refresh">
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+      </button>
+      <span class="pop-up__message">Hello</span>
+    </section>
+  </body>
 </html>
