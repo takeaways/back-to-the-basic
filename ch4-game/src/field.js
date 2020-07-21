@@ -1,11 +1,7 @@
 'use strict';
+import * as sound from './sound.js';
 
 const CARROT_SIZE = 80;
-const carrotSound = new Audio('sound/carrot_pull.mp3');
-const bugSound = new Audio('sound/bug_pull.mp3');
-const bgSound = new Audio('sound/bg.mp3');
-const winSound = new Audio('sound/game_win.mp3');
-const alertSound = new Audio('sound/alert.wav');
 
 export default class Field {
   constructor(carrotCount, bugCount) {
@@ -35,21 +31,12 @@ export default class Field {
       item.setAttribute('src', imgPath);
       item.style.position = 'absolute';
 
-      const x = this._randomNumber(x1, x2);
-      const y = this._randomNumber(y1, y2);
+      const x = randomNumber(x1, x2);
+      const y = randomNumber(y1, y2);
       item.style.left = `${x}px`;
       item.style.top = `${y}px`;
       this.field.appendChild(item);
     }
-  }
-
-  _playSound(sound) {
-    console.log('He');
-    sound.currentTime = 0;
-    sound.play();
-  }
-  _randomNumber(min, max) {
-    return Math.random() * (max - min) + min;
   }
 
   setClickListener(onItemClick) {
@@ -60,11 +47,15 @@ export default class Field {
     const target = event.target;
     if (target.matches('.carrot')) {
       target.remove();
-      this._playSound(carrotSound);
+      sound.playCarrot();
       this.onItemClick && this.onItemClick('carrot');
     } else if (target.matches('.bug')) {
-      this._playSound(bugSound);
+      sound.playBug();
       this.onItemClick && this.onItemClick('bug');
     }
   }
+}
+
+function randomNumber(min, max) {
+  return Math.random() * (max - min) + min;
 }
