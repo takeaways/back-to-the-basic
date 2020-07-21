@@ -189,3 +189,17 @@
    ```
 
 # try web game
+
+### this binding
+
+1. 함수를 인자로 전달할 때 클래스 정보는 전달하지 않습니다.
+   ```javascript
+   this.field.addEventListener('click', this.onClick);
+   ```
+2. this를 바인딩 해줘야 합니다.
+   ```javascript
+   1. this.field.addEventListener('click', this.onClick.bind(this));
+   2. this.field.addEventListener('click', (event) => this.onClick(event));
+   3. this.field.addEventListener('click', this.onClick);
+      onClick = event => {} // 2번과 동일한 방법이나 리스너에서 감싸지 않고 필드에서 처리한다.
+   ```
