@@ -52,7 +52,6 @@ export default class Game {
     this.started = false;
     this.hideGameButton();
     this.stopGameTimer();
-    this.gameFinishBanner.showWithText('REPLAY');
     sound.playAlert();
     sound.stopBackground();
     this.onGameStop && this.onGameStop('cancel');
