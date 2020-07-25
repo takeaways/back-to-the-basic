@@ -1,5 +1,4 @@
 'use strict';
-
 import Field from './field.js';
 import PopUp from './popup.js';
 import * as sound from './sound.js';
