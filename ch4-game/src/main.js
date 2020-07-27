@@ -24,6 +24,5 @@ game.setGameStopListener((reason) => {
     default:
       throw new Error('not valid reason');
   }
-
   gameFinishBanner.showWithText(message);
 });
