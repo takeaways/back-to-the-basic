@@ -22,7 +22,7 @@ game.setGameStopListener((reason) => {
       message = 'lose?';
       break;
     default:
-      throw new Error('not valid reason');
+      throw new Error('not valid reason aa');
   }
   gameFinishBanner.showWithText(message);
 });
